@@ -34,3 +34,9 @@
     padding: 8px 20px;
     border: none;
 }
+
+.form__button:hover {
+    transition: 0.5s;
+    transform: scale(1.05);
+    background-color: rgba(0, 128, 128, 0.788);
+}
