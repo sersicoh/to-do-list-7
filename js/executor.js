@@ -1,4 +1,3 @@
-console.log("Siema, dziś tylko jedno mam pytanie xD. Zdaję sobie sprawę z tej konstrukcji funkcji tzn. render() wywoływany po każdej akcji użytkownika, ale czy przypadkiem nie powinienem się posunąć o krok dalej i zrobić funkcję w której w zależności od akcji użytkownika (akcja przekazywana jako parametr funkcji), będzie wywaływany zestaw konkretnych funkcji, a na końcu zawsze render()? Przykładowe zastosowanie tego co mam na myśli zlokalizowałem na końcu.");
 {
     const tasks = [];
 
@@ -78,36 +77,4 @@ console.log("Siema, dziś tylko jedno mam pytanie xD. Zdaję sobie sprawę z tej
     };
 
     init();
-}
-
-// Przykład z opisu w consoli
-{
-    const newTask = () => { }
-    const doneButtonToggle = () => { }
-    const checkDoneTask = () => { }
-    const removeTask = () => { }
-    const focusNewTaskInput = () => { }
-    const render = () => { }
-    const zróbCośNaPodstawieAkcji = (IndexAkcji) => {
-
-        switch (jakaśAkcja) {
-
-            case addNewTask:
-                newTask();
-                focusNewTaskInput();
-                break;
-
-            case isRemoved:
-                removeTask();
-                break;
-
-            case isDoneTask:
-                doneButtonToggle();
-                break;
-        }
-
-        render();
-
-    }
-    zróbCośNaPodstawieAkcji(jakaśAkcja);
 }
