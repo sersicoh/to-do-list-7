@@ -1,14 +1,17 @@
 {
-    const tasks = [];
+    let tasks = [];
+    let hideDoneTaks = false;
 
     const removeTask = (taskIndex) => {
         tasks.splice(taskIndex, 1);
         render();
     };
     const addNewTask = (newTaskContent) => {
-        tasks.push({
-            content: newTaskContent,
-        });
+
+        tasks = [
+            ...tasks,
+            {content: newTaskContent},
+        ];
         render();
     };
     const toggleTaskDone = (taskIndex) => {
@@ -52,30 +55,44 @@
         focusNewTaskInput();
 
     };
-    const render = () => {
+    const renderTasks = () => {
+
         let tasksListHTMLContent = "";
 
         for (const task of tasks) {
 
             tasksListHTMLContent += `
-            <li class="list__newTask">
-                <button class="list__buttons list__buttons--done js-done">
-                ${task.done ? "✔" : ""}
-                </button>
-                <span class="list__content ${task.done ? "list__content--done" : ""}">
-                ${task.content}
-                </span>
-                <button class="list__buttons list__buttons--remove js-remove">
-                🗑
-                </button>
-            </li>`
+        <li class="list__newTask">
+            <button class="list__buttons list__buttons--done js-done">
+            ${task.done ? "✔" : ""}
+            </button>
+            <span class="list__content ${task.done ? "list__content--done" : ""}">
+            ${task.content}
+            </span>
+            <button class="list__buttons list__buttons--remove js-remove">
+            🗑
+            </button>
+        </li>`
         };
 
         document.querySelector(".js-tasks").innerHTML = tasksListHTMLContent;
 
+    };
+    const renderButtons = () => {
+
+    };
+    const bindButtonsEvents = () => {
+
+
+    };
+    const render = () => {
+
+        renderTasks();
+        renderButtons();
+
         bindRemoveEvents();
         bindToggleDoneEvents();
-
+        bindButtonsEvents();
 
     };
     const init = () => {
