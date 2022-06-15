@@ -28,6 +28,10 @@
     align-items: center;
 }
 
+.list__newTask--hidden{
+    display: none;
+}
+
 .list__buttons {
     color: white;
     padding: 0;

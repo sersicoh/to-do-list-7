@@ -61,7 +61,7 @@
         for (const task of tasks) {
 
             tasksListHTMLContent += `
-        <li class="list__newTask">
+        <li class="list__newTask ${task.done && hideDoneTasks ? "list__newTask--hidden" : ""}">
             <button class="list__buttons list__buttons--done js-done">
             ${task.done ? "✔" : ""}
             </button>
@@ -87,13 +87,17 @@
         };
 
         actionButtons.innerHTML = `
-        <button class="list__action--hideButton js-toggleHideDoneTasks"> ${"dupa"} </button>
-        <button class="list__action--checkButton js-toggleTaskDone"> ${"dupa2"}</button>
+        <button class="list__action--hideButton js-toggleHideDoneTasks"> ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone </button>
+        <button class="list__action--checkButton js-toggleTaskDone" ${tasks.every(({ done }) => done) ? "disabled" : ""}> Ukończ wszystkie</button>
         `;
 
     };
     const bindButtonsEvents = () => {
 
+        const hideDoneTask = document.querySelector(".js-toggleHideDoneTasks");
+        if (hideDoneTask) {
+            hideDoneTask.addEventListener("click", toggleHideDoneTasks);
+        };
 
     };
     const render = () => {
