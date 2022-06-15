@@ -6,12 +6,37 @@
 .list__header {
     display: grid;
     grid-template-columns: 1fr auto;
+    padding-right: 10px;
+    align-items: center;
     grid-gap: 8px;
     border-bottom: 1px solid #ccc;
 }
+
+@media(max-width:767px) {
+    .list__header {
+        grid-template-rows: 1fr;
+    }
+}
+
 .list__headerText {
     margin: 0;
     padding: 20px;
+}
+
+.list__actionButtons {
+    font-style: normal;
+    border: none;
+    color: teal;
+    background-color: white;
+}
+
+.list__actionButtons:hover {
+    transition: 0.5s;
+    color: rgba(0, 128, 128, 0.5);
+}
+
+.list__actionButtons:disabled {
+    color: rgba(0, 128, 128, 0.2);
 }
 
 .list__item {
@@ -28,7 +53,7 @@
     align-items: center;
 }
 
-.list__newTask--hidden{
+.list__newTask--hidden {
     display: none;
 }
 
