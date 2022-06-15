@@ -1,0 +1,44 @@
+.list {
+    background-color: white;
+
+}
+
+.list__header {
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 20px;
+}
+
+.list__item {
+    padding: 20px;
+    margin: 0;
+}
+
+.list__newTask {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 8px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+
+.list__buttons {
+    color: white;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.list__buttons--remove {
+    background-color: red;
+}
+
+.list__buttons--done {
+    background-color: green;
+}
+
+.list__content--done {
+    text-decoration-line: line-through;
+}

@@ -1,0 +1,36 @@
+.form {
+    background-color: white;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.form__header {
+    border-bottom: 1px solid #ccc;
+    margin: 0;
+    padding: 20px;
+}
+
+.form__input {
+    display: grid;
+    grid-template-columns: 4fr auto;
+    grid-gap: 15px;
+    padding: 20px;
+}
+
+@media(max-width:767px) {
+    .form__input {
+        grid-template-columns: auto;
+        grid-gap: 10px;
+    }
+}
+
+.form__inputBox {
+    padding: 8px;
+}
+
+.form__button {
+    background-color: teal;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+}
