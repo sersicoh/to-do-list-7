@@ -79,6 +79,18 @@
     };
     const renderButtons = () => {
 
+        const actionButtons = document.querySelector(".js-buttons");
+
+        if (!tasks.length) {
+            actionButtons.innerHTML = "";
+            return;
+        };
+
+        actionButtons.innerHTML = `
+        <button class="list__action--hideButton js-toggleHideDoneTasks"> ${"dupa"} </button>
+        <button class="list__action--checkButton js-toggleTaskDone"> ${"dupa2"}</button>
+        `;
+
     };
     const bindButtonsEvents = () => {
 
@@ -108,7 +120,6 @@
         console.log(tasks);
 
     };
-
     const init = () => {
 
         render();

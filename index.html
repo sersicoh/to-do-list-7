@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/baseStyles.css">
     <link rel="stylesheet" href="css/body.css">
     <link rel="stylesheet" href="css/form.css">
@@ -19,16 +21,24 @@
     <h1 class="header">Lista zadań</h1>
     <div class="sections">
         <section class="form">
-                <h2 class="form__header">Dodaj nowe zadanie</h2>
+            <h2 class="form__header">Dodaj nowe zadanie</h2>
             <form class="form__input js-form">
                 <input class="form__inputBox js-newTask" placeholder="Co jest do zrobienia?">
                 <button class="form__button">Dodaj zadanie</button>
             </form>
         </section>
         <section class="list">
-            <h2 class="list__header">Lista zadań</h2>
-            <ul class="list__item js-tasks"></ul>
+            <section class="list__header">
+                <h2 class="list__headerText">Lista zadań</h2>
+                <span class="list__actionbuttons js-buttons"></span>
+            </section>
+            <section class="list__body">
+                <ul class="list__item js-tasks"></ul>
+            </section>
         </section>
+
+
+
     </div>
 </body>
 

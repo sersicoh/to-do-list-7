@@ -4,7 +4,12 @@
 }
 
 .list__header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 8px;
     border-bottom: 1px solid #ccc;
+}
+.list__headerText {
     margin: 0;
     padding: 20px;
 }
