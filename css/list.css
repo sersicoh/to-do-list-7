@@ -14,7 +14,7 @@
 
 @media(max-width:767px) {
     .list__header {
-        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -23,20 +23,34 @@
     padding: 20px;
 }
 
-.list__actionButtons {
+.list__actionButton {
     font-style: normal;
     border: none;
     color: teal;
     background-color: white;
+}
+
+@media(max-width:767px) {
+    .list__actionButtons {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        padding: 10px;
+    }
+}
+
+@media(max-width:767px) {
+    .list__actionButton {
+        padding: 8px;
+    }
+}
+
+.list__actionButton:hover {
+
+    color: rgba(0, 128, 128, 0.5);
     transition: 0.5s;
 }
 
-.list__actionButtons:hover {
-    
-    color: rgba(0, 128, 128, 0.5);
-}
-
-.list__actionButtons:disabled {
+.list__actionButton:disabled {
     color: rgba(0, 128, 128, 0.2);
 }
 
@@ -70,6 +84,7 @@
     background-color: red;
     transition: 0.5s;
 }
+
 .list__buttons--remove:hover {
     background-color: rgba(255, 0, 0, 0.781);
 }
@@ -78,6 +93,7 @@
     background-color: green;
     transition: 0.5s;
 }
+
 .list__buttons--done:hover {
     background-color: rgba(0, 128, 0, 0.781);
 }
