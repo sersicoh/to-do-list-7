@@ -1,7 +1,7 @@
 # to-do-list
 Hi, this is small application to do list :D. 
 ## Demo
-[link to: to-do-list](https://sersicoh.github.io/to-do-list/)
+[link to: to-do-list](https://sersicoh.github.io/to-do-list-7/)
 ## Instructions
 ![gif](images/to-do-list-readme.gif)
 ## Description
