@@ -96,8 +96,8 @@
         };
 
         actionButtons.innerHTML = `
-        <button class="list__actionButtons js-toggleHideDoneTasks"> ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone </button>
-        <button class="list__actionButtons list__actionButtons--disabled js-toggleAllTaskDone" ${tasks.every(({ done }) => done) ? "disabled" : ""}> Ukończ wszystkie</button>
+        <button class="list__actionButton js-toggleHideDoneTasks"> ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone </button>
+        <button class="list__actionButton list__actionButton--disabled js-toggleAllTaskDone" ${tasks.every(({ done }) => done) ? "disabled" : ""}> Ukończ wszystkie</button>
         `;
 
     };
