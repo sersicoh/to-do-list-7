@@ -28,10 +28,11 @@
     border: none;
     color: teal;
     background-color: white;
+    transition: 0.5s;
 }
 
 .list__actionButtons:hover {
-    transition: 0.5s;
+    
     color: rgba(0, 128, 128, 0.5);
 }
 
@@ -67,10 +68,18 @@
 
 .list__buttons--remove {
     background-color: red;
+    transition: 0.5s;
+}
+.list__buttons--remove:hover {
+    background-color: rgba(255, 0, 0, 0.781);
 }
 
 .list__buttons--done {
     background-color: green;
+    transition: 0.5s;
+}
+.list__buttons--done:hover {
+    background-color: rgba(0, 128, 0, 0.781);
 }
 
 .list__content--done {
